@@ -1,0 +1,4 @@
+# Rewraps folded (>-) scalars in data/resume.yaml at the width they were
+# hand-wrapped to.
+proseWrap: always
+printWidth: 78
