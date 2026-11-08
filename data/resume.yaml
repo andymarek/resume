@@ -1,0 +1,211 @@
+# Resume content in the JSON Resume schema (https://jsonresume.org/schema).
+# Extensions: education[].location and education[].highlights mirror the
+# same fields on work[]. Each skills[] entry lists its `keywords` strongest
+# first. The contact fields of `basics` (email, phone, location) live in
+# data/contact.yaml.
+
+basics:
+  name: Andrew Marek
+  url: https://andymarek.com
+  profiles:
+    - network: LinkedIn
+      username: andymarek
+      url: https://linkedin.com/in/andymarek
+  summary: >-
+    An engineering leader with over 20 years of health care experience
+    including 13 years building and scaling data teams in large organizations
+    and startups. Leads clinical and revenue-cycle data ingestion through HL7,
+    EDI, and Epic Caboodle for health system customers. Track record of
+    standing up teams from scratch, managing seven-figure budgets and
+    implementations, and earning trust with executive and client stakeholders.
+    Comfortable as either a coach or player-coach to advance organizational
+    goals.
+
+work:
+  - name: Sift Healthcare
+    position: Director, Data Platform
+    location: Milwaukee, WI
+    startDate: "2026-03"
+    highlights:
+      - >-
+        Lead a lean Data Platform organization and own its direction; manage
+        three product-focused data engineers and three data integrity
+        specialists directly and three data engineers through matrix
+        relationships; mentor a first-time peer engineering manager.
+      - >-
+        Own the data extraction relationship with Hartford HealthCare, a
+        nine-hospital Connecticut system; the Caboodle data now feeds data
+        modeling and insight reports, key deliverables in a [product
+        development
+        partnership](https://www.prnewswire.com/news-releases/sift-healthcare-announces-partnership-with-hartford-healthcare-to-apply-ai-and-advanced-analytics-to-reduce-reimbursement-risk-302684619.html).
+      - >-
+        Identified the HL7 interfaces the denial avoidance and overturn
+        products need; brought ADT and BAR into the daily pipeline and lead
+        the move to real-time ingestion.
+      - >-
+        Designed an HL7-first common clinical data model for denial avoidance
+        and overturn models and the actionability engine, built on FHIR
+        concepts (e.g., observations) and defined as JSON metadata that
+        generates 500+ dbt models, docs, and schemas; built its core tables
+        and Caboodle mapping given the team's limited clinical data
+        experience, and handed off the less clinically intense tables.
+      - >-
+        Lead the build of shared disease definitions (e.g., Sepsis-3) on the
+        clinical data model, with data integrity specialists writing
+        specifications that identify where data needs LOINC or SNOMED codes,
+        so Data Science, the actionability engine team, and Business
+        Intelligence share one definition of each condition.
+      - >-
+        Planning FHIR ingestion to extract historic accounts on demand into
+        the common clinical data model; covering clients who receive a
+        downgrade letter months after a claim has been resolved, before enough
+        HL7 data has accumulated.
+
+  - name: Sift Healthcare
+    position: Senior Engineering Manager
+    location: Milwaukee, WI
+    startDate: "2024-07"
+    endDate: "2026-03"
+    highlights:
+      - >-
+        Led three data engineers on revenue-cycle products RevCollect to help
+        overturn claim denials and RevEngage to drive collections.
+      - >-
+        Designed the Snowflake cloning process now used across the
+        organization; shaped Data Platform priorities without formal authority
+        and designed an architecture for massively parallel EDI processing
+        with a senior data engineer.
+      - >-
+        Owned extraction of Hartford's clinical data from the start; pivoted
+        from Epic Clarity to Caboodle when Clarity proved not viable and built
+        a program to pull the data through API and load it into the data
+        platform.
+      - >-
+        Planned and oversaw the technical implementation of cash forecasting
+        in RevCollect, now in production; moved Data Science and Data
+        Engineering onto a shared feature engine and scoring package, so model
+        changes reach production after a quick test instead of being
+        reimplemented by Data Engineering.
+      - >-
+        Aligned and migrated a data pipeline onto the code base of another
+        data pipeline; eliminated 10,000+ lines of code, adopted the best
+        practices of the other data pipeline, aligned common models, and
+        introduced additional testing.
+
+  - name: Aurora Health Care
+    position: Manager, Research Analytics
+    location: Milwaukee, WI
+    startDate: "2013-02"
+    endDate: "2024-07"
+    highlights:
+      - >-
+        Inaugural leader of Research Analytics team; grew the team from three
+        direct reports to nine team members with very little turnover,
+        including six programmers, two data consultants, and one data science
+        liaison; team delivered approximately 40 analysis-ready datasets
+        annually.
+      - >-
+        Built and managed a $1.5 million annual Research Analytics budget that
+        included a $250,000 industry revenue target; accountable for
+        $150,000--$350,000 in grant offsets annually; developed grant budgets,
+        justifications, and scopes of work for sponsor review; initiated and
+        led a director-level working group to align rates and budgeting across
+        academic research departments.
+      - >-
+        Owned $1.8 million implementation project to adopt a new clinical
+        trial management system across two legacy organizations; ran the
+        VP-chaired steering committee, setting agendas and aligning VP-level
+        and executive stakeholders; directed implementation teams; hired and
+        mentored the CTMS administrator and core team leader.
+      - >-
+        Designed and led research data infrastructure built on a
+        metadata-driven ETL process; includes 14 facts, 23 conformed
+        dimensions, and translation layers for OMOP, PCORnet, and
+        [HCSRN](https://www.advocateaurorahealth.org/research/research-news/articles/research-institute-joins-leading-research-network)
+        VDW common data models; delivered numerous datasets to research
+        collaborations in all three formats.
+      - >-
+        Established the Geographic Characteristics research database, building
+        its geocoder and CRF-based address cleaner, to bring area-based
+        socioeconomic status (SES) into research studies for nearly all
+        Advocate Aurora patients; used in dozens of studies; now rebuilding
+        its address parser and geocoder as open source and writing about it at
+        [andymarek.com](https://andymarek.com/).
+      - >-
+        Designed a two-stage data release process to ensure regulatory and
+        legal compliance of datasets as well as alignment to specifications;
+        cited by Compliance as a model for the organization.
+
+  - name: Aurora Health Care
+    position: IT Specialist Senior
+    location: Milwaukee, WI
+    startDate: "2011-01"
+    endDate: "2013-02"
+    highlights:
+      - >-
+        Managed relationships with 91 Wisconsin hospitals; four Medicare HMOs;
+        and researchers at Aurora Health Care, University of
+        Wisconsin--Milwaukee, and Marquette University.
+      - >-
+        Reversed the direction of an interface between PeriData.Net®, a birth
+        and labor registry used across Wisconsin hospitals, and Vital Records
+        including the conversion of 300,000 audited birth records, testing,
+        and training of more than 300 users.
+
+  - name: Aurora Health Care
+    position: Web Applications Developer Senior
+    location: Milwaukee, WI
+    startDate: "2007-07"
+    endDate: "2011-01"
+
+  - name: Aurora Health Care
+    position: Web Applications Developer
+    location: Milwaukee, WI
+    startDate: "2005-04"
+    endDate: "2007-07"
+
+education:
+  - institution: University of Wisconsin--Milwaukee
+    location: Milwaukee, WI
+    area: Management Information Systems
+    minor: Computer Science
+    score: Summa Cum Laude
+    studyType: B.B.A.
+    startDate: "2001"
+    endDate: "2005"
+    highlights:
+      - >-
+        Graduated Summa Cum Laude with a Bachelor of Business Administration;
+        majored in Management Information Systems; minored in Computer
+        Science; 3.78 cumulative G.P.A.
+
+skills:
+  - name: Data platform
+    keywords:
+      - SQL
+      - Java
+      - Python
+      - R
+      - Snowflake
+      - dbt
+      - polars
+  - name: Health care data
+    keywords:
+      - Epic Clarity and Caboodle
+      - HL7 v2 (ADT, BAR)
+      - OMOP
+      - PCORnet
+      - HCSRN VDW
+      - EDI
+      - FHIR
+  - name: Architecture
+    keywords:
+      - dimensional and third normal form data modeling
+      - metadata-driven ETL
+      - common clinical data models
+  - name: Epic-certified, Clarity Data Model (2013--2024)
+    keywords:
+      - ADT and Prelude (registration and location)
+      - Beacon (oncology)
+      - EpicCare Inpatient
+      - Stork (obstetrics)
